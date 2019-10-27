@@ -5,6 +5,9 @@ type Query {
   job(id: ID!): Job
   jobs: [Job]
 }
+type Mutation{
+  createJob(CompanyId:ID,title:String, description:String):Job
+}
 type Company {
   id: ID!
   name: String
