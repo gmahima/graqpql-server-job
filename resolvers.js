@@ -8,9 +8,11 @@ const Query = {
   jobs: () => db.jobs.list()
 };
 const Mutation = {
-  createJob: (root, { input }) => {
-    const id = db.jobs.create(input);
-    return db.jobs.get(id);
+  createJob: (root, { input }, context) => {
+    console.log("context", context);
+    // const id = db.jobs.create(input);
+    // return db.jobs.get(id);
+    return null;
   }
 };
 const Job = {
